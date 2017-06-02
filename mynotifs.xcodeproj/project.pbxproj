@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		557E24480AFA347D0800DBB1 /* Pods_mynotifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94954F786D898BE31BE431A /* Pods_mynotifs.framework */; };
+		E5E0CE81B2C390AC2D45052C /* Pods_mynotifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */; };
+		ED80E5951E58850A000840F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5941E58850A000840F9 /* AppDelegate.swift */; };
+		ED80E5971E58850A000840F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5961E58850A000840F9 /* ViewController.swift */; };
+		ED80E59A1E58850A000840F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80E5981E58850A000840F9 /* Main.storyboard */; };
+		ED80E59C1E58850A000840F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED80E59B1E58850A000840F9 /* Assets.xcassets */; };
+		ED80E59F1E58850A000840F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */; };
+		ED80E5AA1E58850A000840F9 /* mynotifsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5A91E58850A000840F9 /* mynotifsTests.swift */; };
+		ED80E5B51E58850A000840F9 /* mynotifsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5B41E58850A000840F9 /* mynotifsUITests.swift */; };
+		ED80E5C31E58864D000840F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */; };
+		ED80E5C51E58998A000840F9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED80E5C41E58998A000840F9 /* MapKit.framework */; };
+		ED80E6151E58C4CA000840F9 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E60C1E58C4CA000840F9 /* GeoFire.m */; };
+		ED80E6161E58C4CA000840F9 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E60E1E58C4CA000840F9 /* GFBase32Utils.m */; };
+		ED80E6171E58C4CA000840F9 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6101E58C4CA000840F9 /* GFGeoHash.m */; };
+		ED80E6181E58C4CA000840F9 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */; };
+		ED80E6191E58C4CA000840F9 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6141E58C4CA000840F9 /* GFQuery.m */; };
+		ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */; };
+		FE1D10D622B7A1239841C45C /* Pods_mynotifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED80E5A61E58850A000840F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED80E5891E58850A000840F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED80E5901E58850A000840F9;
+			remoteInfo = mynotifs;
+		};
+		ED80E5B11E58850A000840F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED80E5891E58850A000840F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED80E5901E58850A000840F9;
+			remoteInfo = mynotifs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01ED2A868979F26E3BE8E309 /* Pods-mynotifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs.debug.xcconfig"; sourceTree = "<group>"; };
+		05930A7B8DFAAA37C1860A58 /* Pods-mynotifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs.release.xcconfig"; sourceTree = "<group>"; };
+		0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BB432C59AA43D412B170C8 /* Pods-mynotifsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D94954F786D898BE31BE431A /* Pods_mynotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED80E5911E58850A000840F9 /* mynotifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mynotifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED80E5941E58850A000840F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED80E5961E58850A000840F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED80E5991E58850A000840F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED80E59B1E58850A000840F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED80E59E1E58850A000840F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED80E5A01E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mynotifsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED80E5A91E58850A000840F9 /* mynotifsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mynotifsTests.swift; sourceTree = "<group>"; };
+		ED80E5AB1E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mynotifsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED80E5B41E58850A000840F9 /* mynotifsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mynotifsUITests.swift; sourceTree = "<group>"; };
+		ED80E5B61E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED80E5C41E58998A000840F9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ED80E6051E58C4CA000840F9 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		ED80E6061E58C4CA000840F9 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		ED80E6071E58C4CA000840F9 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		ED80E6081E58C4CA000840F9 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		ED80E6091E58C4CA000840F9 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		ED80E60B1E58C4CA000840F9 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		ED80E60C1E58C4CA000840F9 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		ED80E60D1E58C4CA000840F9 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		ED80E60E1E58C4CA000840F9 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		ED80E60F1E58C4CA000840F9 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		ED80E6101E58C4CA000840F9 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		ED80E6111E58C4CA000840F9 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		ED80E6131E58C4CA000840F9 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		ED80E6141E58C4CA000840F9 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		ED80E61A1E58C58B000840F9 /* mynotifs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mynotifs-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED80E58E1E58850A000840F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED80E5C51E58998A000840F9 /* MapKit.framework in Frameworks */,
+				557E24480AFA347D0800DBB1 /* Pods_mynotifs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5A21E58850A000840F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0CE81B2C390AC2D45052C /* Pods_mynotifsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5AD1E58850A000840F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1D10D622B7A1239841C45C /* Pods_mynotifsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4398447C41DF65F936386C5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01ED2A868979F26E3BE8E309 /* Pods-mynotifs.debug.xcconfig */,
+				05930A7B8DFAAA37C1860A58 /* Pods-mynotifs.release.xcconfig */,
+				67BB432C59AA43D412B170C8 /* Pods-mynotifsTests.debug.xcconfig */,
+				DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */,
+				F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */,
+				8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED80E5881E58850A000840F9 = {
+			isa = PBXGroup;
+			children = (
+				ED80E61A1E58C58B000840F9 /* mynotifs-Bridging-Header.h */,
+				ED80E6031E58C4CA000840F9 /* GeoFire */,
+				ED80E5931E58850A000840F9 /* mynotifs */,
+				ED80E5A81E58850A000840F9 /* mynotifsTests */,
+				ED80E5B31E58850A000840F9 /* mynotifsUITests */,
+				ED80E5921E58850A000840F9 /* Products */,
+				4398447C41DF65F936386C5D /* Pods */,
+				F634A0EE4DC7C98168FC43FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED80E5921E58850A000840F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5911E58850A000840F9 /* mynotifs.app */,
+				ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */,
+				ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED80E5931E58850A000840F9 /* mynotifs */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */,
+				ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */,
+				ED80E5941E58850A000840F9 /* AppDelegate.swift */,
+				ED80E5961E58850A000840F9 /* ViewController.swift */,
+				ED80E5981E58850A000840F9 /* Main.storyboard */,
+				ED80E59B1E58850A000840F9 /* Assets.xcassets */,
+				ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */,
+				ED80E5A01E58850A000840F9 /* Info.plist */,
+			);
+			path = mynotifs;
+			sourceTree = "<group>";
+		};
+		ED80E5A81E58850A000840F9 /* mynotifsTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5A91E58850A000840F9 /* mynotifsTests.swift */,
+				ED80E5AB1E58850A000840F9 /* Info.plist */,
+			);
+			path = mynotifsTests;
+			sourceTree = "<group>";
+		};
+		ED80E5B31E58850A000840F9 /* mynotifsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5B41E58850A000840F9 /* mynotifsUITests.swift */,
+				ED80E5B61E58850A000840F9 /* Info.plist */,
+			);
+			path = mynotifsUITests;
+			sourceTree = "<group>";
+		};
+		ED80E6031E58C4CA000840F9 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E6041E58C4CA000840F9 /* API */,
+				ED80E6091E58C4CA000840F9 /* GeoFire-Prefix.pch */,
+				ED80E60A1E58C4CA000840F9 /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		ED80E6041E58C4CA000840F9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E6051E58C4CA000840F9 /* GeoFire.h */,
+				ED80E6061E58C4CA000840F9 /* GFCircleQuery.h */,
+				ED80E6071E58C4CA000840F9 /* GFQuery.h */,
+				ED80E6081E58C4CA000840F9 /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		ED80E60A1E58C4CA000840F9 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E60B1E58C4CA000840F9 /* GeoFire+Private.h */,
+				ED80E60C1E58C4CA000840F9 /* GeoFire.m */,
+				ED80E60D1E58C4CA000840F9 /* GFBase32Utils.h */,
+				ED80E60E1E58C4CA000840F9 /* GFBase32Utils.m */,
+				ED80E60F1E58C4CA000840F9 /* GFGeoHash.h */,
+				ED80E6101E58C4CA000840F9 /* GFGeoHash.m */,
+				ED80E6111E58C4CA000840F9 /* GFGeoHashQuery.h */,
+				ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */,
+				ED80E6131E58C4CA000840F9 /* GFQuery+Private.h */,
+				ED80E6141E58C4CA000840F9 /* GFQuery.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		F634A0EE4DC7C98168FC43FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5C41E58998A000840F9 /* MapKit.framework */,
+				D94954F786D898BE31BE431A /* Pods_mynotifs.framework */,
+				0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */,
+				B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED80E5901E58850A000840F9 /* mynotifs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifs" */;
+			buildPhases = (
+				41EB89267AD42795A1555E60 /* [CP] Check Pods Manifest.lock */,
+				ED80E58D1E58850A000840F9 /* Sources */,
+				ED80E58E1E58850A000840F9 /* Frameworks */,
+				ED80E58F1E58850A000840F9 /* Resources */,
+				1FAD905D01EA751A7A18A49B /* [CP] Embed Pods Frameworks */,
+				37030078EFAC10AC67809A5A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mynotifs;
+			productName = mynotifs;
+			productReference = ED80E5911E58850A000840F9 /* mynotifs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED80E5A41E58850A000840F9 /* mynotifsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsTests" */;
+			buildPhases = (
+				AD75465256DBB52FFAFBB95F /* [CP] Check Pods Manifest.lock */,
+				ED80E5A11E58850A000840F9 /* Sources */,
+				ED80E5A21E58850A000840F9 /* Frameworks */,
+				ED80E5A31E58850A000840F9 /* Resources */,
+				A57EBB615F5F9C83564060DA /* [CP] Embed Pods Frameworks */,
+				5028A73167D72926D757C98D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED80E5A71E58850A000840F9 /* PBXTargetDependency */,
+			);
+			name = mynotifsTests;
+			productName = mynotifsTests;
+			productReference = ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED80E5AF1E58850A000840F9 /* mynotifsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsUITests" */;
+			buildPhases = (
+				42CDC12EF49D61C3D06C5662 /* [CP] Check Pods Manifest.lock */,
+				ED80E5AC1E58850A000840F9 /* Sources */,
+				ED80E5AD1E58850A000840F9 /* Frameworks */,
+				ED80E5AE1E58850A000840F9 /* Resources */,
+				4FD0A20A54DAEEA7596B620E /* [CP] Embed Pods Frameworks */,
+				D862648B6913B3711DCC1C1E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED80E5B21E58850A000840F9 /* PBXTargetDependency */,
+			);
+			name = mynotifsUITests;
+			productName = mynotifsUITests;
+			productReference = ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED80E5891E58850A000840F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = weza;
+				TargetAttributes = {
+					ED80E5901E58850A000840F9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G5A2E3RMNX;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					ED80E5A41E58850A000840F9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G5A2E3RMNX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED80E5901E58850A000840F9;
+					};
+					ED80E5AF1E58850A000840F9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G5A2E3RMNX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED80E5901E58850A000840F9;
+					};
+				};
+			};
+			buildConfigurationList = ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "mynotifs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED80E5881E58850A000840F9;
+			productRefGroup = ED80E5921E58850A000840F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED80E5901E58850A000840F9 /* mynotifs */,
+				ED80E5A41E58850A000840F9 /* mynotifsTests */,
+				ED80E5AF1E58850A000840F9 /* mynotifsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED80E58F1E58850A000840F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED80E59F1E58850A000840F9 /* LaunchScreen.storyboard in Resources */,
+				ED80E5C31E58864D000840F9 /* GoogleService-Info.plist in Resources */,
+				ED80E59C1E58850A000840F9 /* Assets.xcassets in Resources */,
+				ED80E59A1E58850A000840F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5A31E58850A000840F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5AE1E58850A000840F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FAD905D01EA751A7A18A49B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37030078EFAC10AC67809A5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41EB89267AD42795A1555E60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42CDC12EF49D61C3D06C5662 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FD0A20A54DAEEA7596B620E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5028A73167D72926D757C98D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A57EBB615F5F9C83564060DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD75465256DBB52FFAFBB95F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D862648B6913B3711DCC1C1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED80E58D1E58850A000840F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED80E6161E58C4CA000840F9 /* GFBase32Utils.m in Sources */,
+				ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */,
+				ED80E5971E58850A000840F9 /* ViewController.swift in Sources */,
+				ED80E6171E58C4CA000840F9 /* GFGeoHash.m in Sources */,
+				ED80E5951E58850A000840F9 /* AppDelegate.swift in Sources */,
+				ED80E6151E58C4CA000840F9 /* GeoFire.m in Sources */,
+				ED80E6181E58C4CA000840F9 /* GFGeoHashQuery.m in Sources */,
+				ED80E6191E58C4CA000840F9 /* GFQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5A11E58850A000840F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED80E5AA1E58850A000840F9 /* mynotifsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED80E5AC1E58850A000840F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED80E5B51E58850A000840F9 /* mynotifsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED80E5A71E58850A000840F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED80E5901E58850A000840F9 /* mynotifs */;
+			targetProxy = ED80E5A61E58850A000840F9 /* PBXContainerItemProxy */;
+		};
+		ED80E5B21E58850A000840F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED80E5901E58850A000840F9 /* mynotifs */;
+			targetProxy = ED80E5B11E58850A000840F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED80E5981E58850A000840F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED80E5991E58850A000840F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED80E59E1E58850A000840F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED80E5B71E58850A000840F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED80E5B81E58850A000840F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED80E5BA1E58850A000840F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01ED2A868979F26E3BE8E309 /* Pods-mynotifs.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED80E5BB1E58850A000840F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05930A7B8DFAAA37C1860A58 /* Pods-mynotifs.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ED80E5BD1E58850A000840F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BB432C59AA43D412B170C8 /* Pods-mynotifsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mynotifs.app/mynotifs";
+			};
+			name = Debug;
+		};
+		ED80E5BE1E58850A000840F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mynotifs.app/mynotifs";
+			};
+			name = Release;
+		};
+		ED80E5C01E58850A000840F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = mynotifs;
+			};
+			name = Debug;
+		};
+		ED80E5C11E58850A000840F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = G5A2E3RMNX;
+				INFOPLIST_FILE = mynotifsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = mynotifs;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "mynotifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED80E5B71E58850A000840F9 /* Debug */,
+				ED80E5B81E58850A000840F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED80E5BA1E58850A000840F9 /* Debug */,
+				ED80E5BB1E58850A000840F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED80E5BD1E58850A000840F9 /* Debug */,
+				ED80E5BE1E58850A000840F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED80E5C01E58850A000840F9 /* Debug */,
+				ED80E5C11E58850A000840F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED80E5891E58850A000840F9 /* Project object */;
+}
