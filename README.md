@@ -1,14 +1,28 @@
 # poke-radar
 
-1. shows the location of pokemon in the Apple Map that was found by some other user at a particulat place .
+Poke radar  shows the pokemon location on map. User can tap on any pokemon and can find a route to travel to that location
 
-2. Based on Croud sourcing, 
+## Installation
+- Make a clone of repo
+- setup firebase account 
+- replace 'GoogleService-Info' with your own file 
+- run the project
 
-3. When a user find pokemon at particular location he/she enter Tap a button within the App, then the location of pokemon and the type of pokemon info will be store on firebase database .
+## Tasks
 
-4. When any user will open the app, all the pokeman within given radious will show on the map. 
+- [x] Firebase Setup
+- [x] Add GeoFire in Project and update Geofire policies for firebase
+- [x] Add Apple mapkit
+- [x] Add Google Map for Directions
 
-5. user can click on the annotaion, that will draw a route from user location to pokemon location.
+## Requirements
+- ios 11.0+
+- xcode 9.0+
+
+## Credits
+- https://github.com/firebase/geofire
 
 
-App is not on App Store.
+
+## License
+Poke Radar is available under the MIT license. See the LICENSE file for more info.
