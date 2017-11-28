@@ -16,8 +16,8 @@ Poke radar  shows the pokemon location on map. User can tap on any pokemon and c
 - [x] Add Google Map for Directions
 
 ## Requirements
-- ios 11.0+
-- xcode 9.0+
+- ios 10.0+
+- xcode 8.0+
 
 ## Credits
 - https://github.com/firebase/geofire
