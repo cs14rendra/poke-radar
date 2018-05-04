@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mynotifs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,12 +29,13 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrf-Kl-7vR">
-                                <rect key="frame" x="0.0" y="613" width="44" height="44"/>
+                                <rect key="frame" x="10" y="603" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="SfZ-Cu-aMJ"/>
                                     <constraint firstAttribute="width" constant="44" id="mOn-lK-egk"/>
                                 </constraints>
-                                <state key="normal" image="pokeball"/>
+                                <color key="tintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="plus"/>
                                 <connections>
                                     <action selector="showrandomPokemon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAT-GX-KjB"/>
                                 </connections>
@@ -45,7 +46,7 @@
                                     <constraint firstAttribute="width" constant="44" id="eDJ-mH-3Gb"/>
                                     <constraint firstAttribute="height" constant="44" id="x7V-Os-gFc"/>
                                 </constraints>
-                                <color key="tintColor" red="0.25098040700000002" green="0.76862746479999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.89803922179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button" image="currentLocation"/>
                                 <connections>
                                     <action selector="currrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWG-ih-6MB"/>
@@ -57,15 +58,17 @@
                             <constraint firstItem="Oah-Y5-0Yi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5q3-VK-bdq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KgX-6H-FuS" secondAttribute="trailing" constant="10" id="OFx-dB-Due"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oah-Y5-0Yi" secondAttribute="bottom" id="Rgh-rk-AAW"/>
-                            <constraint firstItem="yrf-Kl-7vR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aNa-FL-TRc"/>
+                            <constraint firstItem="yrf-Kl-7vR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="aNa-FL-TRc"/>
                             <constraint firstAttribute="trailing" secondItem="Oah-Y5-0Yi" secondAttribute="trailing" id="bYZ-1a-3Xv"/>
                             <constraint firstItem="Oah-Y5-0Yi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hEJ-5n-eqd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KgX-6H-FuS" secondAttribute="bottom" constant="20" id="iCw-Q6-lMp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yrf-Kl-7vR" secondAttribute="bottom" constant="10" id="l8N-eI-tSY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yrf-Kl-7vR" secondAttribute="bottom" constant="20" id="l8N-eI-tSY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addbutton" destination="yrf-Kl-7vR" id="vbO-o7-gc9"/>
                         <outlet property="mapViewStory" destination="Oah-Y5-0Yi" id="gfN-rX-LYT"/>
+                        <outlet property="userlocationbutton" destination="KgX-6H-FuS" id="0dB-mP-g1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,6 +149,6 @@
     </scenes>
     <resources>
         <image name="currentLocation" width="64" height="64"/>
-        <image name="pokeball" width="97" height="96"/>
+        <image name="plus" width="166" height="166"/>
     </resources>
 </document>

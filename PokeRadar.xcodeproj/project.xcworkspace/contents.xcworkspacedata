@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:mynotifs.xcodeproj">
+      location = "self:/Users/surendrakumar/Documents/Desktop/Full+Project/Poke_radar/PokeRadar.xcodeproj">
    </FileRef>
 </Workspace>

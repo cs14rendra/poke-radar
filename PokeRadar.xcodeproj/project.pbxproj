@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		557E24480AFA347D0800DBB1 /* Pods_mynotifs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94954F786D898BE31BE431A /* Pods_mynotifs.framework */; };
+		007633AD7F59BB45AAF3693A /* Pods_PokeRadarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D851FCBFB896F027092390 /* Pods_PokeRadarUITests.framework */; };
+		467DEAC092F8D8FDE92E7AC4 /* Pods_PokeRadarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865C0043A68217CAC8DDEB7 /* Pods_PokeRadarTests.framework */; };
+		B46C6194DA8ACF6D34730969 /* Pods_PokeRadar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F167049DBE083325964F6016 /* Pods_PokeRadar.framework */; };
 		E5E0CE81B2C390AC2D45052C /* Pods_mynotifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */; };
 		ED80E5951E58850A000840F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5941E58850A000840F9 /* AppDelegate.swift */; };
 		ED80E5971E58850A000840F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5961E58850A000840F9 /* ViewController.swift */; };
@@ -24,6 +26,7 @@
 		ED80E6181E58C4CA000840F9 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */; };
 		ED80E6191E58C4CA000840F9 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6141E58C4CA000840F9 /* GFQuery.m */; };
 		ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */; };
+		EDBA1D21209C628B00B8D70E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA1D20209C628A00B8D70E /* Extension.swift */; };
 		FE1D10D622B7A1239841C45C /* Pods_mynotifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,22 +51,30 @@
 		01ED2A868979F26E3BE8E309 /* Pods-mynotifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs.debug.xcconfig"; sourceTree = "<group>"; };
 		05930A7B8DFAAA37C1860A58 /* Pods-mynotifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs.release.xcconfig"; sourceTree = "<group>"; };
 		0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AC2331FF8AD090171C25FC /* Pods-PokeRadar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.release.xcconfig"; sourceTree = "<group>"; };
+		4770AF514B7B1AEF9EA9EEB0 /* Pods-PokeRadarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadarUITests/Pods-PokeRadarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5865C0043A68217CAC8DDEB7 /* Pods_PokeRadarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C5B585E6E88C6073941623 /* Pods-PokeRadarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadarUITests/Pods-PokeRadarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		67BB432C59AA43D412B170C8 /* Pods-mynotifsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6808C64AE193FAF1978D37D4 /* Pods-PokeRadarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadarTests/Pods-PokeRadarTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BB8FEBCE3240EC96DED55A5 /* Pods-PokeRadar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.debug.xcconfig"; sourceTree = "<group>"; };
 		8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D851FCBFB896F027092390 /* Pods_PokeRadarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94954F786D898BE31BE431A /* Pods_mynotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests.release.xcconfig"; sourceTree = "<group>"; };
-		ED80E5911E58850A000840F9 /* mynotifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mynotifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CF96EEEC26F92D7769D9D0 /* Pods-PokeRadarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadarTests/Pods-PokeRadarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED80E5911E58850A000840F9 /* PokeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED80E5941E58850A000840F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED80E5961E58850A000840F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED80E5991E58850A000840F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED80E59B1E58850A000840F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED80E59E1E58850A000840F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED80E5A01E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mynotifsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED80E5A51E58850A000840F9 /* PokeRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED80E5A91E58850A000840F9 /* mynotifsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mynotifsTests.swift; sourceTree = "<group>"; };
 		ED80E5AB1E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mynotifsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED80E5B01E58850A000840F9 /* PokeRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED80E5B41E58850A000840F9 /* mynotifsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mynotifsUITests.swift; sourceTree = "<group>"; };
 		ED80E5B61E58850A000840F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -83,8 +94,10 @@
 		ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
 		ED80E6131E58C4CA000840F9 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		ED80E6141E58C4CA000840F9 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
-		ED80E61A1E58C58B000840F9 /* mynotifs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mynotifs-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED80E61A1E58C58B000840F9 /* PokeRadar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokeRadar-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		EDBA1D20209C628A00B8D70E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F167049DBE083325964F6016 /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED80E5C51E58998A000840F9 /* MapKit.framework in Frameworks */,
-				557E24480AFA347D0800DBB1 /* Pods_mynotifs.framework in Frameworks */,
+				B46C6194DA8ACF6D34730969 /* Pods_PokeRadar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5E0CE81B2C390AC2D45052C /* Pods_mynotifsTests.framework in Frameworks */,
+				467DEAC092F8D8FDE92E7AC4 /* Pods_PokeRadarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE1D10D622B7A1239841C45C /* Pods_mynotifsUITests.framework in Frameworks */,
+				007633AD7F59BB45AAF3693A /* Pods_PokeRadarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +141,12 @@
 				DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */,
 				F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */,
 				8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */,
+				8BB8FEBCE3240EC96DED55A5 /* Pods-PokeRadar.debug.xcconfig */,
+				14AC2331FF8AD090171C25FC /* Pods-PokeRadar.release.xcconfig */,
+				E8CF96EEEC26F92D7769D9D0 /* Pods-PokeRadarTests.debug.xcconfig */,
+				6808C64AE193FAF1978D37D4 /* Pods-PokeRadarTests.release.xcconfig */,
+				65C5B585E6E88C6073941623 /* Pods-PokeRadarUITests.debug.xcconfig */,
+				4770AF514B7B1AEF9EA9EEB0 /* Pods-PokeRadarUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -133,7 +154,7 @@
 		ED80E5881E58850A000840F9 = {
 			isa = PBXGroup;
 			children = (
-				ED80E61A1E58C58B000840F9 /* mynotifs-Bridging-Header.h */,
+				ED80E61A1E58C58B000840F9 /* PokeRadar-Bridging-Header.h */,
 				ED80E6031E58C4CA000840F9 /* GeoFire */,
 				ED80E5931E58850A000840F9 /* mynotifs */,
 				ED80E5A81E58850A000840F9 /* mynotifsTests */,
@@ -147,9 +168,9 @@
 		ED80E5921E58850A000840F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED80E5911E58850A000840F9 /* mynotifs.app */,
-				ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */,
-				ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */,
+				ED80E5911E58850A000840F9 /* PokeRadar.app */,
+				ED80E5A51E58850A000840F9 /* PokeRadarTests.xctest */,
+				ED80E5B01E58850A000840F9 /* PokeRadarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +182,7 @@
 				ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */,
 				ED80E5941E58850A000840F9 /* AppDelegate.swift */,
 				ED80E5961E58850A000840F9 /* ViewController.swift */,
+				EDBA1D20209C628A00B8D70E /* Extension.swift */,
 				ED80E5981E58850A000840F9 /* Main.storyboard */,
 				ED80E59B1E58850A000840F9 /* Assets.xcassets */,
 				ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */,
@@ -232,6 +254,9 @@
 				D94954F786D898BE31BE431A /* Pods_mynotifs.framework */,
 				0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */,
 				B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */,
+				F167049DBE083325964F6016 /* Pods_PokeRadar.framework */,
+				5865C0043A68217CAC8DDEB7 /* Pods_PokeRadarTests.framework */,
+				C1D851FCBFB896F027092390 /* Pods_PokeRadarUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED80E5901E58850A000840F9 /* mynotifs */ = {
+		ED80E5901E58850A000840F9 /* PokeRadar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifs" */;
+			buildConfigurationList = ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadar" */;
 			buildPhases = (
 				41EB89267AD42795A1555E60 /* [CP] Check Pods Manifest.lock */,
 				ED80E58D1E58850A000840F9 /* Sources */,
@@ -254,14 +279,14 @@
 			);
 			dependencies = (
 			);
-			name = mynotifs;
+			name = PokeRadar;
 			productName = mynotifs;
-			productReference = ED80E5911E58850A000840F9 /* mynotifs.app */;
+			productReference = ED80E5911E58850A000840F9 /* PokeRadar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED80E5A41E58850A000840F9 /* mynotifsTests */ = {
+		ED80E5A41E58850A000840F9 /* PokeRadarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsTests" */;
+			buildConfigurationList = ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadarTests" */;
 			buildPhases = (
 				AD75465256DBB52FFAFBB95F /* [CP] Check Pods Manifest.lock */,
 				ED80E5A11E58850A000840F9 /* Sources */,
@@ -275,14 +300,14 @@
 			dependencies = (
 				ED80E5A71E58850A000840F9 /* PBXTargetDependency */,
 			);
-			name = mynotifsTests;
+			name = PokeRadarTests;
 			productName = mynotifsTests;
-			productReference = ED80E5A51E58850A000840F9 /* mynotifsTests.xctest */;
+			productReference = ED80E5A51E58850A000840F9 /* PokeRadarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ED80E5AF1E58850A000840F9 /* mynotifsUITests */ = {
+		ED80E5AF1E58850A000840F9 /* PokeRadarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsUITests" */;
+			buildConfigurationList = ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadarUITests" */;
 			buildPhases = (
 				42CDC12EF49D61C3D06C5662 /* [CP] Check Pods Manifest.lock */,
 				ED80E5AC1E58850A000840F9 /* Sources */,
@@ -296,9 +321,9 @@
 			dependencies = (
 				ED80E5B21E58850A000840F9 /* PBXTargetDependency */,
 			);
-			name = mynotifsUITests;
+			name = PokeRadarUITests;
 			productName = mynotifsUITests;
-			productReference = ED80E5B01E58850A000840F9 /* mynotifsUITests.xctest */;
+			productReference = ED80E5B01E58850A000840F9 /* PokeRadarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -335,7 +360,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "mynotifs" */;
+			buildConfigurationList = ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "PokeRadar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -348,9 +373,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED80E5901E58850A000840F9 /* mynotifs */,
-				ED80E5A41E58850A000840F9 /* mynotifsTests */,
-				ED80E5AF1E58850A000840F9 /* mynotifsUITests */,
+				ED80E5901E58850A000840F9 /* PokeRadar */,
+				ED80E5A41E58850A000840F9 /* PokeRadarTests */,
+				ED80E5AF1E58850A000840F9 /* PokeRadarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,13 +415,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		37030078EFAC10AC67809A5A /* [CP] Copy Pods Resources */ = {
@@ -411,7 +443,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifs/Pods-mynotifs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		41EB89267AD42795A1555E60 /* [CP] Check Pods Manifest.lock */ = {
@@ -420,13 +452,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokeRadar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		42CDC12EF49D61C3D06C5662 /* [CP] Check Pods Manifest.lock */ = {
@@ -435,13 +470,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokeRadarUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4FD0A20A54DAEEA7596B620E /* [CP] Embed Pods Frameworks */ = {
@@ -456,7 +494,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadarUITests/Pods-PokeRadarUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5028A73167D72926D757C98D /* [CP] Copy Pods Resources */ = {
@@ -471,7 +509,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadarTests/Pods-PokeRadarTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A57EBB615F5F9C83564060DA /* [CP] Embed Pods Frameworks */ = {
@@ -486,7 +524,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadarTests/Pods-PokeRadarTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD75465256DBB52FFAFBB95F /* [CP] Check Pods Manifest.lock */ = {
@@ -495,13 +533,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PokeRadarTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D862648B6913B3711DCC1C1E /* [CP] Copy Pods Resources */ = {
@@ -516,7 +557,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeRadarUITests/Pods-PokeRadarUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -526,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBA1D21209C628B00B8D70E /* Extension.swift in Sources */,
 				ED80E6161E58C4CA000840F9 /* GFBase32Utils.m in Sources */,
 				ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */,
 				ED80E5971E58850A000840F9 /* ViewController.swift in Sources */,
@@ -558,12 +600,12 @@
 /* Begin PBXTargetDependency section */
 		ED80E5A71E58850A000840F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED80E5901E58850A000840F9 /* mynotifs */;
+			target = ED80E5901E58850A000840F9 /* PokeRadar */;
 			targetProxy = ED80E5A61E58850A000840F9 /* PBXContainerItemProxy */;
 		};
 		ED80E5B21E58850A000840F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED80E5901E58850A000840F9 /* mynotifs */;
+			target = ED80E5901E58850A000840F9 /* PokeRadar */;
 			targetProxy = ED80E5B11E58850A000840F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -683,11 +725,11 @@
 		};
 		ED80E5BA1E58850A000840F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01ED2A868979F26E3BE8E309 /* Pods-mynotifs.debug.xcconfig */;
+			baseConfigurationReference = 8BB8FEBCE3240EC96DED55A5 /* Pods-PokeRadar.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G5A2E3RMNX;
 				INFOPLIST_FILE = mynotifs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -698,11 +740,11 @@
 		};
 		ED80E5BB1E58850A000840F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05930A7B8DFAAA37C1860A58 /* Pods-mynotifs.release.xcconfig */;
+			baseConfigurationReference = 14AC2331FF8AD090171C25FC /* Pods-PokeRadar.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G5A2E3RMNX;
 				INFOPLIST_FILE = mynotifs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -713,7 +755,7 @@
 		};
 		ED80E5BD1E58850A000840F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67BB432C59AA43D412B170C8 /* Pods-mynotifsTests.debug.xcconfig */;
+			baseConfigurationReference = E8CF96EEEC26F92D7769D9D0 /* Pods-PokeRadarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,13 +765,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mynotifs.app/mynotifs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeRadar.app/PokeRadar";
 			};
 			name = Debug;
 		};
 		ED80E5BE1E58850A000840F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */;
+			baseConfigurationReference = 6808C64AE193FAF1978D37D4 /* Pods-PokeRadarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -739,13 +781,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.weza.mynotifsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mynotifs.app/mynotifs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokeRadar.app/PokeRadar";
 			};
 			name = Release;
 		};
 		ED80E5C01E58850A000840F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */;
+			baseConfigurationReference = 65C5B585E6E88C6073941623 /* Pods-PokeRadarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G5A2E3RMNX;
@@ -760,7 +802,7 @@
 		};
 		ED80E5C11E58850A000840F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EBCD2210D0B9174E4DD0904 /* Pods-mynotifsUITests.release.xcconfig */;
+			baseConfigurationReference = 4770AF514B7B1AEF9EA9EEB0 /* Pods-PokeRadarUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = G5A2E3RMNX;
@@ -776,7 +818,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "mynotifs" */ = {
+		ED80E58C1E58850A000840F9 /* Build configuration list for PBXProject "PokeRadar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED80E5B71E58850A000840F9 /* Debug */,
@@ -785,7 +827,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifs" */ = {
+		ED80E5B91E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED80E5BA1E58850A000840F9 /* Debug */,
@@ -794,7 +836,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsTests" */ = {
+		ED80E5BC1E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED80E5BD1E58850A000840F9 /* Debug */,
@@ -803,7 +845,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "mynotifsUITests" */ = {
+		ED80E5BF1E58850A000840F9 /* Build configuration list for PBXNativeTarget "PokeRadarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED80E5C01E58850A000840F9 /* Debug */,

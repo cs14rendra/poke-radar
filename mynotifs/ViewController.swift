@@ -9,25 +9,59 @@
 import UIKit
 import MapKit
 import FirebaseDatabase
-class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+
+
+class ViewController: UIViewController{
     
-    var geoFire : GeoFire!
-    var geoFireRef : FIRDatabaseReference!
+   
     @IBOutlet var mapViewStory: MKMapView!
+    @IBOutlet weak var userlocationbutton: UIButton!
+    @IBOutlet weak var addbutton: UIButton!
+    
     var launched = false
     let locationManager = CLLocationManager()
-    
+    var geoFire : GeoFire!
+    var geoFireRef : DatabaseReference!
+    var colors = [UIColor]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestLocation()
-        geoFireRef = FIRDatabase.database().reference()
+        geoFireRef = Database.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
         if let location = mapViewStory.userLocation.location{
             showSightingonMap(location: location)
         }
-       mapViewStory.userTrackingMode = .follow
+       locationManager.delegate = self
+        locationManager.requestLocation()
+        mapViewStory.userTrackingMode = .follow
+        mapViewStory.showsUserLocation = true
+        
+        userlocationbutton.ApplyShadow()
+        addbutton.ApplyShadow()
+        
+        for _ in 0..<pokemon.count {
+           colors.append(UIColor.random())
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         //requestLocation()
+    }
+    
+    // if user see any pokemon then save it
+    @IBAction func showrandomPokemon(_ sender: Any) {
+            let loc = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
+            let random  = arc4random_uniform(151) + 1
+         createSighting(forlocation: loc, withPokemon: Int(random))
+         showSightingonMap(location: loc)
+    }
+    
+    
+    @IBAction func currrentLocation(_ sender: Any) {
+        guard let location = mapViewStory.userLocation.location else {return}
+        centerLocation(location: location)
     }
     
     
@@ -40,13 +74,43 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             print("location access denied")
         default:
             locationManager.requestWhenInUseAuthorization()
-            
         }
     }
+    
     func centerLocation(location : CLLocation){
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
         mapViewStory.setRegion(coordinateRegion, animated: true)
     }
+    
+    
+    //save new pokemon
+    func createSighting(forlocation : CLLocation,withPokemon pokeId: Int){
+        geoFire.setLocation(forlocation, forKey: "\(pokeId)")
+    }
+    
+    //show pokemon
+    func showSightingonMap(location : CLLocation){
+        let circleQuery = geoFire.query(at: location, withRadius: 0.5)
+        circleQuery.observe(GFEventType.keyEntered, with: { (key, location) in
+            let anno = PokeAnnotation(coordinate: location.coordinate, pokemonNumber: Int(key)!)
+            self.mapViewStory.addAnnotation(anno)
+        })
+    }
+    
+}
+
+extension ViewController :  CLLocationManagerDelegate {
+  
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        showSightingonMap(location: locations.first!)
+    }
+}
+
+extension ViewController : MKMapViewDelegate{
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if let loc = userLocation.location{
@@ -58,89 +122,56 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-       
         let annotationView : MKAnnotationView?
         if annotation is MKUserLocation{
             let annotatioView = mapView.dequeueReusableAnnotationView(withIdentifier: "User") ?? MKAnnotationView()
-            annotatioView.image = UIImage(named: "ash")
-           
-            return annotatioView
-        }else if let anno = mapViewStory.dequeueReusableAnnotationView(withIdentifier: "pokemon"){
-            annotationView = anno
-            annotationView?.annotation = annotation
+            annotatioView.image = UIImage(named: "user")
+            annotatioView.transform = CGAffineTransform(scaleX: 2.5, y: 2.5)
+            return nil
         }else{
-            let anno = MKAnnotationView(annotation: annotation, reuseIdentifier: "pokemon")
-            annotationView = anno
-            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            
-        }
-        
-        if let annotationView = annotationView , let anno = annotation as? PokeAnnotation{
-            annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "\(anno.pokemonNumber)")
+            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pokemon") ?? MKAnnotationView()
+            let image = UIImage(named: "Marker")?.withRenderingMode(.alwaysTemplate)
+            let anno  = annotation  as! PokeAnnotation
+            print(anno.pokemonNumber)
+            annotationView?.image = image?.imageWithColor(color1: colors[anno.pokemonNumber % (pokemon.count-1)])
+//            annotationView?.canShowCallout = true
+//            annotationView?.layer.shadowColor = UIColor.black.cgColor
+//            annotationView?.layer.shadowOpacity = 1.0
+//            annotationView?.layer.shadowOffset = CGSize(width:1, height: 2)
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named : "map"), for: .normal)
-            annotationView.rightCalloutAccessoryView = btn
+            let btn2 = UIButton()
+            btn2.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+            btn2.setImage(UIImage(named : "map"), for: .normal)
+            annotationView?.rightCalloutAccessoryView = btn
+            annotationView?.leftCalloutAccessoryView = btn2
         }
-        
-        
         return annotationView
     }
-    //save new pokemon
-    func createSighting(forlocation : CLLocation,withPokemon pokeId: Int){
-        geoFire.setLocation(forlocation, forKey: "\(pokeId)")
-    }
-    
-    //show pokemon
-    func showSightingonMap(location : CLLocation){
-        let circleQuery = geoFire.query(at: location, withRadius: 0.5)
         
-        circleQuery?.observe(GFEventType.keyEntered, with: { (key, location) in
-            
-            print("Reading................")
-            if let key = key, let location = location{
-                let anno = PokeAnnotation(coordinate: location.coordinate, pokemonNumber: Int(key)!)
-                print("the key is ........\(key)")
-                self.mapViewStory.addAnnotation(anno)
-            }
-        })
-    }
-    
-    // if user see any pokemon then save it
-    @IBAction func showrandomPokemon(_ sender: Any) {
-            let loc = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
-            let random  = arc4random_uniform(151) + 1
-         createSighting(forlocation: loc, withPokemon: Int(random))
-        showSightingonMap(location: loc)
-    }
-    
-    
-    @IBAction func currrentLocation(_ sender: Any) {
-        
-        centerLocation(location: mapViewStory.userLocation.location!)
-    }
-    
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-        print("Region is changing.......")
         let location = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
-        print("location is : \(location.coordinate)")
         showSightingonMap(location: location)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if (control == view.leftCalloutAccessoryView){
+            print("Left")
+        }
+        if let anno = view.annotation as? PokeAnnotation{
+            let place = MKPlacemark(coordinate: anno.coordinate)
+            let destination = MKMapItem(placemark: place)
+            destination.name = "Pokemon Sighting"
+            let regiondistance : CLLocationDistance = 1000
+            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regiondistance, regiondistance)
+            let option  = [MKLaunchOptionsMapCenterKey:NSValue(mkCoordinate : regionSpan.center),MKLaunchOptionsMapSpanKey:NSValue(mkCoordinateSpan : regionSpan.span),MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
+            MKMapItem.openMaps(with: [destination], launchOptions: option)
+        }
         
-        print("accesoryTapped")
-//        if let anno = view.annotation as? PokeAnnotation{
-//            let place = MKPlacemark(coordinate: anno.coordinate)
-//            let destination = MKMapItem(placemark: place)
-//            destination.name = "Pokemon Sighting"
-//            let regiondistance : CLLocationDistance = 1000
-//            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regiondistance, regiondistance)
-//            let option  = [MKLaunchOptionsMapCenterKey:NSValue(mkCoordinate : regionSpan.center),MKLaunchOptionsMapSpanKey:NSValue(mkCoordinateSpan : regionSpan.span),MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
-//            MKMapItem.openMaps(with: [destination], launchOptions: option)
-    //    }
-        UIApplication.shared.openURL(URL(string:"comgooglemaps://?saddr=Google+Inc,+8th+Avenue,+New+York,+NY&daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&directionsmode=transit")!)
+        // Open google Map
+//        UIApplication.shared.openURL(URL(string:"comgooglemaps://?saddr=Google+Inc,+8th+Avenue,+New+York,+NY&daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&directionsmode=transit")!)
     }
 }
+
 
