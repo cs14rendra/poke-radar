@@ -10,27 +10,30 @@ import UIKit
 import MapKit
 import FirebaseDatabase
 
-
+var colors = [UIColor]()
 class ViewController: UIViewController{
     
    
     @IBOutlet var mapViewStory: MKMapView!
     @IBOutlet weak var userlocationbutton: UIButton!
     @IBOutlet weak var addbutton: UIButton!
-    
+    var times : Int = 20
     var launched = false
     let locationManager = CLLocationManager()
     var geoFire : GeoFire!
     var geoFireRef : DatabaseReference!
-    var colors = [UIColor]()
+    var selectedPoke = [Int]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for index in 0..<pokemon.count{
+            selectedPoke.append(index)
+        }
         geoFireRef = Database.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
         if let location = mapViewStory.userLocation.location{
-            showSightingonMap(location: location)
+            showSightingonMap(location: location, filter: selectedPoke)
         }
        locationManager.delegate = self
         locationManager.requestLocation()
@@ -43,6 +46,7 @@ class ViewController: UIViewController{
         for _ in 0..<pokemon.count {
            colors.append(UIColor.random())
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,10 +56,22 @@ class ViewController: UIViewController{
     
     // if user see any pokemon then save it
     @IBAction func showrandomPokemon(_ sender: Any) {
-            let loc = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
-            let random  = arc4random_uniform(151) + 1
-         createSighting(forlocation: loc, withPokemon: Int(random))
-         showSightingonMap(location: loc)
+//            let loc = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
+//            let random  = arc4random_uniform(151) + 1
+//         createSighting(forlocation: loc, withPokemon: Int(random))
+//         showSightingonMap(location: loc)
+        let vc = PokeListVC()
+        vc.delegate = self
+        vc.textLB = "Select pokemon to add"
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func filterButton(_ sender: Any) {
+        let vc = PokeListVC()
+        vc.delegate = self
+        vc.textLB = "Select pokemon to show"
+        vc.isAllowMultSelection = true
+        present(vc, animated: true, completion: nil)
     }
     
     
@@ -89,11 +105,14 @@ class ViewController: UIViewController{
     }
     
     //show pokemon
-    func showSightingonMap(location : CLLocation){
+    func showSightingonMap(location : CLLocation, filter: [Int]){
         let circleQuery = geoFire.query(at: location, withRadius: 0.5)
-        circleQuery.observe(GFEventType.keyEntered, with: { (key, location) in
-            let anno = PokeAnnotation(coordinate: location.coordinate, pokemonNumber: Int(key)!)
-            self.mapViewStory.addAnnotation(anno)
+        circleQuery.observe(GFEventType.keyEntered, with: { (_key, location) in
+            let key : Int = Int(_key)!
+            if self.selectedPoke.contains(key){
+                let anno = PokeAnnotation(coordinate: location.coordinate, pokemonNumber: key)
+                self.mapViewStory.addAnnotation(anno)
+            }
         })
     }
     
@@ -106,7 +125,7 @@ extension ViewController :  CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        showSightingonMap(location: locations.first!)
+        showSightingonMap(location: locations.first!, filter: selectedPoke)
     }
 }
 
@@ -134,10 +153,16 @@ extension ViewController : MKMapViewDelegate{
             let anno  = annotation  as! PokeAnnotation
             print(anno.pokemonNumber)
             annotationView?.image = image?.imageWithColor(color1: colors[anno.pokemonNumber % (pokemon.count-1)])
-//            annotationView?.canShowCallout = true
+            annotationView?.canShowCallout = true
+            
+//            if times > 0 {
 //            annotationView?.layer.shadowColor = UIColor.black.cgColor
 //            annotationView?.layer.shadowOpacity = 1.0
 //            annotationView?.layer.shadowOffset = CGSize(width:1, height: 2)
+//                annotationView?.layer.shouldRasterize = true
+//                annotationView?.layer.rasterizationScale = UIScreen.main.scale
+//                times -= 1
+//            }
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named : "map"), for: .normal)
@@ -145,14 +170,14 @@ extension ViewController : MKMapViewDelegate{
             btn2.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
             btn2.setImage(UIImage(named : "map"), for: .normal)
             annotationView?.rightCalloutAccessoryView = btn
-            annotationView?.leftCalloutAccessoryView = btn2
+            //annotationView?.leftCalloutAccessoryView = btn2
         }
         return annotationView
     }
         
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         let location = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
-        showSightingonMap(location: location)
+        showSightingonMap(location: location, filter: selectedPoke)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -171,6 +196,21 @@ extension ViewController : MKMapViewDelegate{
         
         // Open google Map
 //        UIApplication.shared.openURL(URL(string:"comgooglemaps://?saddr=Google+Inc,+8th+Avenue,+New+York,+NY&daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&directionsmode=transit")!)
+    }
+}
+
+extension ViewController : PokeListVCDelegate{
+    func getSelelctedPokemon(pokemons: [Int]) {
+        print(pokemons)
+        self.mapViewStory.removeAnnotations(mapViewStory.annotations)
+        self.selectedPoke = pokemons
+        guard let location = mapViewStory.userLocation.location else {return}
+        self.showSightingonMap(location: location, filter: selectedPoke)
+    }
+    
+    func didSelectPokemon(number: Int) {
+        guard let location = mapViewStory.userLocation.location else {return}
+        createSighting(forlocation: location, withPokemon: number)
     }
 }
 

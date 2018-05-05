@@ -11,6 +11,10 @@
 		467DEAC092F8D8FDE92E7AC4 /* Pods_PokeRadarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865C0043A68217CAC8DDEB7 /* Pods_PokeRadarTests.framework */; };
 		B46C6194DA8ACF6D34730969 /* Pods_PokeRadar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F167049DBE083325964F6016 /* Pods_PokeRadar.framework */; };
 		E5E0CE81B2C390AC2D45052C /* Pods_mynotifsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3F3FBB10C72482646A1BD8 /* Pods_mynotifsTests.framework */; };
+		ED488F41209CE62F004443CA /* PokeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED488F3F209CE62F004443CA /* PokeListVC.swift */; };
+		ED488F42209CE62F004443CA /* PokeListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED488F40209CE62F004443CA /* PokeListVC.xib */; };
+		ED488F45209CE851004443CA /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED488F43209CE851004443CA /* PokeCell.swift */; };
+		ED488F46209CE851004443CA /* PokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED488F44209CE851004443CA /* PokeCell.xib */; };
 		ED80E5951E58850A000840F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5941E58850A000840F9 /* AppDelegate.swift */; };
 		ED80E5971E58850A000840F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E5961E58850A000840F9 /* ViewController.swift */; };
 		ED80E59A1E58850A000840F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80E5981E58850A000840F9 /* Main.storyboard */; };
@@ -26,6 +30,7 @@
 		ED80E6181E58C4CA000840F9 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6121E58C4CA000840F9 /* GFGeoHashQuery.m */; };
 		ED80E6191E58C4CA000840F9 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ED80E6141E58C4CA000840F9 /* GFQuery.m */; };
 		ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */; };
+		EDAA73B5209DAA92007139F8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAA73B4209DAA92007139F8 /* Settings.swift */; };
 		EDBA1D21209C628B00B8D70E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBA1D20209C628A00B8D70E /* Extension.swift */; };
 		FE1D10D622B7A1239841C45C /* Pods_mynotifsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2186F90814FC7C1AFE59EB5 /* Pods_mynotifsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +69,10 @@
 		D94954F786D898BE31BE431A /* Pods_mynotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mynotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD780247A4A65616EEBD4F0 /* Pods-mynotifsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsTests/Pods-mynotifsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8CF96EEEC26F92D7769D9D0 /* Pods-PokeRadarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadarTests/Pods-PokeRadarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED488F3F209CE62F004443CA /* PokeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeListVC.swift; sourceTree = "<group>"; };
+		ED488F40209CE62F004443CA /* PokeListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeListVC.xib; sourceTree = "<group>"; };
+		ED488F43209CE851004443CA /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		ED488F44209CE851004443CA /* PokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeCell.xib; sourceTree = "<group>"; };
 		ED80E5911E58850A000840F9 /* PokeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED80E5941E58850A000840F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED80E5961E58850A000840F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +105,7 @@
 		ED80E6141E58C4CA000840F9 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		ED80E61A1E58C58B000840F9 /* PokeRadar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokeRadar-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		EDAA73B4209DAA92007139F8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EDBA1D20209C628A00B8D70E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F167049DBE083325964F6016 /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D4B92D5FFAE45DAEEE5C14 /* Pods-mynotifsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mynotifsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mynotifsUITests/Pods-mynotifsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +161,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED488F3C209CE463004443CA /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */,
+				EDBA1D20209C628A00B8D70E /* Extension.swift */,
+			);
+			name = Extenstion;
+			sourceTree = "<group>";
+		};
+		ED488F3D209CE473004443CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5961E58850A000840F9 /* ViewController.swift */,
+				EDAA73B4209DAA92007139F8 /* Settings.swift */,
+				ED488F3F209CE62F004443CA /* PokeListVC.swift */,
+				ED488F40209CE62F004443CA /* PokeListVC.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED488F3E209CE489004443CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E5981E58850A000840F9 /* Main.storyboard */,
+				ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */,
+				ED488F43209CE851004443CA /* PokeCell.swift */,
+				ED488F44209CE851004443CA /* PokeCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ED80E5881E58850A000840F9 = {
 			isa = PBXGroup;
 			children = (
@@ -178,15 +219,10 @@
 		ED80E5931E58850A000840F9 /* mynotifs */ = {
 			isa = PBXGroup;
 			children = (
-				ED80E61B1E58CABF000840F9 /* PokeAnnotation.swift */,
-				ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */,
-				ED80E5941E58850A000840F9 /* AppDelegate.swift */,
-				ED80E5961E58850A000840F9 /* ViewController.swift */,
-				EDBA1D20209C628A00B8D70E /* Extension.swift */,
-				ED80E5981E58850A000840F9 /* Main.storyboard */,
-				ED80E59B1E58850A000840F9 /* Assets.xcassets */,
-				ED80E59D1E58850A000840F9 /* LaunchScreen.storyboard */,
-				ED80E5A01E58850A000840F9 /* Info.plist */,
+				EDBA1D22209CE40300B8D70E /* Supporting Files */,
+				ED488F3C209CE463004443CA /* Extenstion */,
+				ED488F3D209CE473004443CA /* Controller */,
+				ED488F3E209CE489004443CA /* View */,
 			);
 			path = mynotifs;
 			sourceTree = "<group>";
@@ -245,6 +281,17 @@
 				ED80E6141E58C4CA000840F9 /* GFQuery.m */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EDBA1D22209CE40300B8D70E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED80E59B1E58850A000840F9 /* Assets.xcassets */,
+				ED80E5941E58850A000840F9 /* AppDelegate.swift */,
+				ED80E5A01E58850A000840F9 /* Info.plist */,
+				ED80E5C21E58864D000840F9 /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F634A0EE4DC7C98168FC43FA /* Frameworks */ = {
@@ -385,7 +432,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED488F46209CE851004443CA /* PokeCell.xib in Resources */,
 				ED80E59F1E58850A000840F9 /* LaunchScreen.storyboard in Resources */,
+				ED488F42209CE62F004443CA /* PokeListVC.xib in Resources */,
 				ED80E5C31E58864D000840F9 /* GoogleService-Info.plist in Resources */,
 				ED80E59C1E58850A000840F9 /* Assets.xcassets in Resources */,
 				ED80E59A1E58850A000840F9 /* Main.storyboard in Resources */,
@@ -570,11 +619,14 @@
 				EDBA1D21209C628B00B8D70E /* Extension.swift in Sources */,
 				ED80E6161E58C4CA000840F9 /* GFBase32Utils.m in Sources */,
 				ED80E61C1E58CABF000840F9 /* PokeAnnotation.swift in Sources */,
+				ED488F41209CE62F004443CA /* PokeListVC.swift in Sources */,
 				ED80E5971E58850A000840F9 /* ViewController.swift in Sources */,
 				ED80E6171E58C4CA000840F9 /* GFGeoHash.m in Sources */,
+				EDAA73B5209DAA92007139F8 /* Settings.swift in Sources */,
 				ED80E5951E58850A000840F9 /* AppDelegate.swift in Sources */,
 				ED80E6151E58C4CA000840F9 /* GeoFire.m in Sources */,
 				ED80E6181E58C4CA000840F9 /* GFGeoHashQuery.m in Sources */,
+				ED488F45209CE851004443CA /* PokeCell.swift in Sources */,
 				ED80E6191E58C4CA000840F9 /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

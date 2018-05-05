@@ -158,7 +158,8 @@ let pokemon = [
     "dragonair",
     "dragonite",
     "mewtwo",
-    "mew"]
+    "mew",
+    "OTHER TYPE"]
 
 class PokeAnnotation : NSObject,MKAnnotation{
     
@@ -170,7 +171,7 @@ class PokeAnnotation : NSObject,MKAnnotation{
     init(coordinate : CLLocationCoordinate2D,pokemonNumber: Int) {
         self.coordinate = coordinate
         self.pokemonNumber = pokemonNumber
-        self.pokemonName = pokemon[pokemonNumber-1].capitalized
+        self.pokemonName = pokemon[pokemonNumber].capitalized
         self.title = self.pokemonName
     }
 }
