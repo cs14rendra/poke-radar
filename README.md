@@ -1,6 +1,15 @@
 # poke-radar
 
 Poke radar  shows the pokemon location on map. User can tap on any pokemon and can find a route to travel to that location
+Apple Review : Its a copycat of Pokemon GO APP, so it is not on App Store
+
+
+## Screenshots
+
+<p align="center">
+  <img src="https://i.imgur.com/LSYG2VO.png" width="300"/>
+  <img src="https://i.imgur.com/kRDJJSK.png" width="300"/>
+</p>
 
 ## Installation
 - Make a clone of repo
