@@ -1,6 +1,0 @@
-framework module Pods_mynotifs {
-  umbrella header "Pods-mynotifs-umbrella.h"
-
-  export *
-  module * { export * }
-}
