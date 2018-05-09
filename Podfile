@@ -6,6 +6,8 @@ target 'PokeRadar' do
   use_frameworks!
 pod ‘Firebase’
 pod ‘Firebase/Database’
+pod 'AlertOnboarding'
+
 
   # Pods for PokeRadar
 

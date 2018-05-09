@@ -51,15 +51,19 @@ class ViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         //requestLocation()
+         requestLocation()
+        if !isAppAlreadyLaunchedOnce(){
+            WelcomeAlert().getAlertView().show()
+        }
     }
     
     // if user see any pokemon then save it
     @IBAction func showrandomPokemon(_ sender: Any) {
-//            let loc = CLLocation(latitude: mapViewStory.centerCoordinate.latitude, longitude: mapViewStory.centerCoordinate.longitude)
-//            let random  = arc4random_uniform(151) + 1
-//         createSighting(forlocation: loc, withPokemon: Int(random))
-//         showSightingonMap(location: loc)
+        
+        guard let _ = mapViewStory.userLocation.location else {
+            self.showalert(title: "Error!", msg: "User location not found")
+            return
+        }
         let vc = PokeListVC()
         vc.delegate = self
         vc.textLB = "Select pokemon to add"
@@ -76,7 +80,10 @@ class ViewController: UIViewController{
     
     
     @IBAction func currrentLocation(_ sender: Any) {
-        guard let location = mapViewStory.userLocation.location else {return}
+        guard let location = mapViewStory.userLocation.location else {
+            self.showalert(title: "Error!", msg: "User location not found")
+            return
+        }
         centerLocation(location: location)
     }
     
@@ -87,10 +94,27 @@ class ViewController: UIViewController{
         case .authorizedAlways, .authorizedWhenInUse:
             return
         case .denied,.restricted:
-            print("location access denied")
+            showEventsAcessDeniedAlert()
         default:
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func showEventsAcessDeniedAlert(){
+        let alert = UIAlertController(title: "Location", message: "Turn on location", preferredStyle: .alert)
+        let settingdAction = UIAlertAction(title: "Settings", style: .default) { (action) in
+            if let appsettings = NSURL(string: UIApplicationOpenSettingsURLString){
+                UIApplication.shared.open(appsettings as URL, options: [:], completionHandler: nil)
+            }
+        }
+        let cancleAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(settingdAction)
+        alert.addAction(cancleAction)
+        var top = UIApplication.shared.keyWindow?.rootViewController
+        while  top?.presentedViewController != nil{
+            top = top?.presentedViewController
+        }
+        top?.present(alert, animated: true, completion: nil)
     }
     
     func centerLocation(location : CLLocation){
@@ -125,7 +149,8 @@ extension ViewController :  CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        showSightingonMap(location: locations.first!, filter: selectedPoke)
+        guard let locaton = locations.first else {return}
+        showSightingonMap(location:locaton, filter: selectedPoke)
     }
 }
 

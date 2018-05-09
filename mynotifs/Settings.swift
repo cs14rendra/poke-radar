@@ -9,15 +9,25 @@
 import Foundation
 import UIKit
 
-let APP_ID = "1104988123"
-let APP_URL = "https://itunes.apple.com/us/app/private-for-youtube/id1104988123?ls=1&mt=8"
-let DESCRIPTION = "Hey, Find nearby Pokemon"
+let APP_ID = "1381125391"
+let APP_URL = "https://itunes.apple.com/us/app/poke-radar/id1381125391?ls=1&mt=8"
+let DESCRIPTION = "Hey, Find nearby Pokemon using :"
 
 class Settings : UITableViewController{
  
     @IBAction func rateUS(_ sender: Any) {
         let url : URL = URL(string: "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\(APP_ID)&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=7")!
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+        let alert = UIAlertController(title: "Rate US", message: "If you Enjoy using this App, please rate us 5-star on App store. It would be greate encouragement for us to continue improving the product", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Rate", style: .default) { (action) in
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+        let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     @IBAction func share(_ sender: Any) {
         let acivity1 = DESCRIPTION
@@ -30,6 +40,8 @@ class Settings : UITableViewController{
         present(activity, animated: true, completion: nil)
     }
     @IBAction func help(_ sender: Any) {
+        let alert = WelcomeAlert().getAlertView()
+        alert.show()
     }
     
     
@@ -40,7 +52,7 @@ class Settings : UITableViewController{
 
 extension Settings{
     func loadUserTable(){
-        let vc = PokeListVC()
+        let vc = PokeListVC() 
         vc.isUserTable = true
         vc.userPokeList = getPokeList() ?? []
         vc.textLB = "Pokemon types added by you:"
